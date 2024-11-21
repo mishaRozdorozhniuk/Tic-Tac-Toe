@@ -99,7 +99,16 @@ const Game = () => {
             {winningIndexes.length > 0 && <div className="">
                 <h2>Game Over</h2>
                 <p>Thank you for playing!</p>
-                <button onClick={() => window.location.reload()}>Play Again</button>
+                <button onClick={() => window.location.reload()} style={{
+                    fontSize: '24px',
+                    padding: '15px 30px',
+                    borderRadius: '10px',
+                    backgroundColor: '#2b6cb0',
+                    color: 'white',
+                    border: 'none',
+                    cursor: 'pointer'
+                }}>Play Again
+                </button>
             </div>}
         </>
 
