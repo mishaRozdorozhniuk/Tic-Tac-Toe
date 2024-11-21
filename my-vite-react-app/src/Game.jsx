@@ -83,6 +83,7 @@ const Game = () => {
     }, [boardCopy]);
 
     return (
+        <>
         <div className="board">
             {board.map((row, rowIndex) =>
                 row.map((cell, cellIndex) =>
@@ -93,8 +94,15 @@ const Game = () => {
                     />
                 )
             )}
-            {winningIndexes.length > 0 && <Modal />}
+
         </div>
+            {winningIndexes.length > 0 && <div className="">
+                <h2>Game Over</h2>
+                <p>Thank you for playing!</p>
+                <button onClick={() => window.location.reload()}>Play Again</button>
+            </div>}
+        </>
+
     );
 };
 
