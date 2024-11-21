@@ -40,7 +40,7 @@ const Game = () => {
             console.log(`Winner is ${winner}`);
         }
         if(winner === gameState.DRAFT) {
-            console.log('Game over')
+            window.location.reload()
             return null
         }
     }
